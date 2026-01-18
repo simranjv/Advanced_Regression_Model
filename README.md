@@ -55,17 +55,26 @@ The project is divided into two main parts:
     - **Ridge Regression:**
     For Ridge regression, the most important features are OverallQual, GrLivArea, TotRmsAbvGrd, OverallCond, 1stFlrSF, FullBath, 2ndFlrSF, GarageCars, and Neighborhood_Crawfor, showing that quality, size, and layout drive house prices.
         Alpha selected: 10.0
+      
         Ridge Train R²: 0.9127731647815557
+      
         Ridge Test R²: 0.8744827545479026
+      
         Ridge RMSE: 0.13744649630277958
+      
         Features Selected = 258(all features retained)
     
    - **Lasso Regression:** 
    For Lasso regression, the key predictors are GrLivArea, OverallQual, PoolQC_Gd, OverallCond, GarageCars, TotRmsAbvGrd, BsmtFullBath, and neighborhood-related variables, indicating that Lasso focuses on fewer but stronger predictors while eliminating less important ones.
+
         Alpha selected: 0.001
+     
         Lasso Train R2: 0.9088427486286539
+     
         Lasso Test R2: 0.8736070972240357
+     
         Lasso RMSE: 0.13792510323469795
+     
         Features Selected = 87
    - **Comparison**     
    Although Ridge and Lasso deliver almost identical prediction performance, the difference in accuracy between them is minimal and not practically significant. Lasso is selected because it automatically removes less important features, reducing the model from 258 to 87 variables. This makes the model simpler, more interpretable, and more useful for identifying key drivers of house prices for business decisions.
